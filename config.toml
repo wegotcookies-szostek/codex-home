@@ -29,6 +29,9 @@ trust_level = "trusted"
 [projects."/home/igor/Sites/selena"]
 trust_level = "trusted"
 
+[projects."/home/igor/.codex"]
+trust_level = "trusted"
+
 [notice.model_migrations]
 "gpt-5.2-codex" = "gpt-5.4"
 
@@ -38,11 +41,16 @@ args = ["-y", "@upstash/context7-mcp"]
 
 [mcp_servers.chrome-devtools]
 command = "npx"
-args = ["chrome-devtools-mcp@latest", "--executablePath=/usr/bin/google-chrome", "--headless"]
+args = [
+    "-y",
+    "chrome-devtools-mcp@latest",
+    "--headless",
+    "--chromeArg", "--no-sandbox"
+]
 
 [mcp_servers.gitnexus]
 command = "npx"
-args = ["-y", "gitnexus@latest", "mcp"]
+args = ["-y", "gitnexus", "mcp"]
 
 [plugins."github@openai-curated"]
 enabled = true
