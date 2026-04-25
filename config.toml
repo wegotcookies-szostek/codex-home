@@ -1,0 +1,48 @@
+model = "gpt-5.4"
+model_reasoning_effort = "medium"
+personality = "pragmatic"
+
+[projects."/home/igor/Sites/wgc2"]
+trust_level = "trusted"
+
+[projects."/home/igor/Sites/brainrot-magento"]
+trust_level = "trusted"
+
+[projects."/home/igor/Sites"]
+trust_level = "trusted"
+
+[projects."/home/igor/Sites/agentchattr/macos-linux"]
+trust_level = "trusted"
+
+[projects."/home/igor"]
+trust_level = "trusted"
+
+[projects."/mnt/c/Users/szost"]
+trust_level = "trusted"
+
+[projects."/home/igor/Sites/vox-uae"]
+trust_level = "trusted"
+
+[projects."/home/igor/Sites/notifiti"]
+trust_level = "trusted"
+
+[projects."/home/igor/Sites/selena"]
+trust_level = "trusted"
+
+[notice.model_migrations]
+"gpt-5.2-codex" = "gpt-5.4"
+
+[mcp_servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp"]
+
+[mcp_servers.chrome-devtools]
+command = "npx"
+args = ["chrome-devtools-mcp@latest", "--executablePath=/usr/bin/google-chrome", "--headless"]
+
+[mcp_servers.gitnexus]
+command = "npx"
+args = ["-y", "gitnexus@latest", "mcp"]
+
+[plugins."github@openai-curated"]
+enabled = true
